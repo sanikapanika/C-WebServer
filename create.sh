@@ -2,11 +2,14 @@
 
 make
 
+echo "Name your server root dir: "
+read rootdir
+
 if [[ ! -d "webserver" ]]; then
-	mkdir server
+	mkdir
 	fi
-	touch server/index.html
-	echo "Edit file inside webserver folder"
-	echo "After that run: ./webserver <port> server/"
+touch server/index.html
+echo "Edit file inside ". ${rootdir} ." folder"
+echo "After that run: ./webserver <port> ". ${rootdir}
 
 make clean

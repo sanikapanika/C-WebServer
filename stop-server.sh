@@ -16,12 +16,5 @@ do
   fi
 done
 
-echo "Have you changed the server root dir name (webserver) y/n"
-read yn
-if [[ ${yn} == "y" ]]; then
-    echo "What is the name of the server? "
-    read dirname
-    kill $(lsof -i :${port} | grep ${dirname} | cut -d " " -f2)
-    exit
-fi
 kill $(lsof -i :${port} | grep webserver | cut -d " " -f2)
+make full-clean
