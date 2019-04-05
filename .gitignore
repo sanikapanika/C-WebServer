@@ -2,3 +2,4 @@ server
 *.out
 cmake-build-debug
 .idea
+.gitignore
